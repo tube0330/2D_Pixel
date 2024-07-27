@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 786050601
+    locked: 0
+  - name: PLAYER
+    uniqueID: 793137625
+    locked: 0
+  - name: PLATFORM
+    uniqueID: 522401245
+    locked: 0
