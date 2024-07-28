@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,14 +8,23 @@ public class Player : MonoBehaviour
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] Animator ani;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Transform tr;
     float speed = 3f;
     float jumpForce = 3f;
     float h = 0f;
     int jumpCnt = 0;
     int maxJumpCnt = 1;
 
+    [Header("Ladder")]
+    bool isLadder = false;
+
+    [Header("Tag")]
+    string TileMapTag = "TILEMAP";
+    string LadderTag = "LADDER";
+
     void Start()
     {
+        tr = transform;
         sprite = GetComponent<SpriteRenderer>();
         ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -23,11 +33,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         HorizontalMove();
-
         Jump();
     }
 
-    private void HorizontalMove()
+    //수평이동
+    void HorizontalMove()
     {
         h = 0f;
         if (Input.GetKey(KeyCode.A))
@@ -43,13 +53,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Jump()
+    void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpCnt < maxJumpCnt)
         {
             jumpCnt++;
             ani.SetBool("isJump", true);
-            //rb.velocity = new Vector2(rb.velocity.x, 0); // 수직 속도 초기화
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
@@ -65,15 +74,45 @@ public class Player : MonoBehaviour
 
         else
             ani.SetBool("isRun", false);
+
+        //사다리 이동
+        LadderMove();
+    }
+
+    void LadderMove()
+    {
+        if (isLadder)
+        {
+            float v = Input.GetAxis("Vertical");
+            rb.gravityScale = 0;
+            rb.velocity = new Vector2(rb.velocity.x, v * speed);
+        }
+
+        else
+            rb.gravityScale = 1f;
     }
 
     //JumpCnt 초기화로 무한 점프 막기
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("TILEMAP"))
+        if (col.gameObject.CompareTag(TileMapTag))
         {
             jumpCnt = 0;
             ani.SetBool("isJump", false);
         }
     }
+
+    #region 사다리 이동 구현
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag(LadderTag))
+            isLadder = true;
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag(LadderTag))
+            isLadder = false;
+    }
+    #endregion
 }
