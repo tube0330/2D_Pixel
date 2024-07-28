@@ -47,20 +47,11 @@ public class Player : MonoBehaviour
         else
             ani.SetBool("isRun", false);
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isJump)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             isJump = true;
             ani.SetBool("isJump", isJump);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("TILEMAP"))
-        {
-            isJump = false;
-            ani.SetBool("isJump", isJump);
         }
     }
 }
