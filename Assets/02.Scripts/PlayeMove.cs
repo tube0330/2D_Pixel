@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     float jumpForce = 3f;
     float h = 0f;
     int jumpCnt = 0;
-    int maxJumpCnt = 1;
+    int maxJumpCnt = 2;
 
     [Header("Ladder")]
     public bool isLadder = false;

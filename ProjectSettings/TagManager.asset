@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TILEMAP
   - LADDER
+  - ITEM
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: PLATFORM
     uniqueID: 522401245
+    locked: 0
+  - name: ITEM
+    uniqueID: 1767003759
     locked: 0
   - name: PLAYER
     uniqueID: 793137625
