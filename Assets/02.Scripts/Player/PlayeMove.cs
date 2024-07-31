@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Transform tr;
     float speed = 3f;
-    float jumpForce = 3f;
+    float jumpForce = 3.5f;
     float h = 0f;
     int jumpCnt = 0;
     int maxJumpCnt = 2;
@@ -39,13 +39,13 @@ public class PlayerMove : MonoBehaviour
     void HorizontalMove()
     {
         h = 0f;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             h = -1f;
             sprite.flipX = true;
         }
 
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             h = 1f;
             sprite.flipX = false;
