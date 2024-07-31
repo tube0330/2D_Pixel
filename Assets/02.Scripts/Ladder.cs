@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Tag")]
+    string playerTag = "Player";
+
+    void OnTriggerEnter2D(Collider2D col)
     {
-        
+        if (col.CompareTag(playerTag))
+        {
+            PlayerMove playerMove = col.GetComponent<PlayerMove>();
+            
+            if (playerMove != null)
+                playerMove.isLadder = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit2D(Collider2D col)
     {
-        
+        if (col.CompareTag(playerTag))
+        {
+            PlayerMove playerMove = col.GetComponent<PlayerMove>();
+
+            if (playerMove != null)
+                playerMove.isLadder = false;
+        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] Animator ani;
@@ -16,11 +16,10 @@ public class Player : MonoBehaviour
     int maxJumpCnt = 1;
 
     [Header("Ladder")]
-    bool isLadder = false;
+    public bool isLadder = false;
 
     [Header("Tag")]
     string TileMapTag = "TILEMAP";
-    string LadderTag = "LADDER";
 
     void Start()
     {
@@ -101,18 +100,4 @@ public class Player : MonoBehaviour
             ani.SetBool("isJump", false);
         }
     }
-
-    #region 사다리 이동 구현
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag(LadderTag))
-            isLadder = true;
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag(LadderTag))
-            isLadder = false;
-    }
-    #endregion
 }
