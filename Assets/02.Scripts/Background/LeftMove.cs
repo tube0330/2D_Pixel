@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LeftMove : MonoBehaviour
 {
+    [Header ("Move background")]
     private Transform tr;
     private BoxCollider2D boxcol;
     private float speed = 1f;

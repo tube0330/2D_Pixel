@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [Header("off all objects for the next stage")]
     SpriteRenderer bg;
     GameObject obj_1;
+    Sprite[] bgSprite;
 
     void Awake()
     {
@@ -25,8 +26,10 @@ public class GameManager : MonoBehaviour
 
         score_txt = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
 
-        bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>();GetComponent<SpriteRenderer>();
+        bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>(); GetComponent<SpriteRenderer>();
         obj_1 = GameObject.Find("_OBJECT_1");
+
+        bgSprite = Resources.LoadAll<Sprite>("BackgroundImg");
     }
 
     void Update()
@@ -34,13 +37,24 @@ public class GameManager : MonoBehaviour
         score_txt.text = $"score: {score}";
     }
 
-    //첫번째 bg 끄기
+    //첫번째 obj 끄기
     public void OffBackground(bool isoff)
     {
         if (isoff)
         {
             bg.gameObject.SetActive(false);
+            
             obj_1.gameObject.SetActive(false);
+
+            RandomBg();
         }
+    }
+
+    void RandomBg()
+    {
+        int idx = Random.Range(0, bgSprite.Length);
+        bg.sprite = bgSprite[idx];
+
+        bg.gameObject.SetActive(true);
     }
 }
