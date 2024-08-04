@@ -12,4 +12,4 @@
 # 240804
 1. Start Scene UI, Scene Move
 2. Random Background
-3. beat stage -> turn off all obj -> turn on next stage obj
+3. beat stage -> turn off all obj -> turn on next stage obj (using switch.case)
