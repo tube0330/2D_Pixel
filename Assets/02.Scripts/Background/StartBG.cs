@@ -3,7 +3,7 @@ using UnityEngine;
 public class StartBG : MonoBehaviour
 {
     Transform tr;
-    float speed = 2f; // 이동 속도
+    float speed = 1f; // 이동 속도
     float startPosX;
     float w;
     bool moveLeft = true;
@@ -22,10 +22,10 @@ public class StartBG : MonoBehaviour
         {
             tr.Translate(Vector3.left * speed * Time.deltaTime);
 
-            if (transform.position.x <= startPosX - w)
+            if (tr.position.x <= startPosX - w)
                 moveLeft = false;
         }
-        
+
         else
         {
             tr.Translate(Vector3.right * speed * Time.deltaTime);
