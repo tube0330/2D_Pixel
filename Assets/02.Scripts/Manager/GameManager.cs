@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public int score = 0;
 
     [Header("off all objects for the next stage")]
-    SpriteRenderer bg1, bg2;
+    SpriteRenderer bg;
     GameObject obj_1;
 
     void Awake()
@@ -25,8 +25,7 @@ public class GameManager : MonoBehaviour
 
         score_txt = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
 
-        bg1 = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>();
-        bg2 = GameObject.Find("Background").transform.GetChild(1).GetComponent<SpriteRenderer>();
+        bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>();GetComponent<SpriteRenderer>();
         obj_1 = GameObject.Find("_OBJECT_1");
     }
 
@@ -40,8 +39,7 @@ public class GameManager : MonoBehaviour
     {
         if (isoff)
         {
-            bg1.gameObject.SetActive(false);
-            bg2.gameObject.SetActive(false);
+            bg.gameObject.SetActive(false);
             obj_1.gameObject.SetActive(false);
         }
     }

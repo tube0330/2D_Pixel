@@ -20,7 +20,7 @@ public class LeftMove : MonoBehaviour
     {
         tr.Translate(Vector2.left * speed * Time.deltaTime);
 
-        if (tr.position.x <= -width)
+        if (tr.position.x <= -width/2)
         {
             RePosition();
         }
@@ -28,7 +28,7 @@ public class LeftMove : MonoBehaviour
 
     void RePosition()
     {
-        Vector2 pos = new Vector3(width * 2, 0f, tr.position.z);
+        Vector2 pos = new Vector3(width, 0f, tr.position.z);
         tr.position = pos + (Vector2)tr.position;
     }
 }
