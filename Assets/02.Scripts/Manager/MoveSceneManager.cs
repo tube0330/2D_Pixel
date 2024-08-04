@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MoveSceneManager : MonoBehaviour
+public class MoveManager : MonoBehaviour
 {
 
     public void LoadNextScene()
