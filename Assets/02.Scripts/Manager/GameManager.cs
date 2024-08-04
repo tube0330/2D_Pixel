@@ -51,13 +51,13 @@ public class GameManager : MonoBehaviour
             bg.gameObject.SetActive(false); //배경 이미지 off
             obj1.SetActive(false);          //첫번째 스테이지 off
 
-            RandomBg();                     //배경 이미지 랜덤하게 변경
+            RandomBg();                     //배경 이미지 랜덤하게 생성
             bg.gameObject.SetActive(true);  //배경이미지 on
             obj2.SetActive(true);           //두번째 스테이지 시작
 
-            RandomBg();                     //배경 이미지 랜덤하게 변경
+            RandomBg();                     //배경 이미지 랜덤하게 생성
             bg.gameObject.SetActive(true);  //배경이미지 on
-            obj2.SetActive(false);           //두번째 스테이지 시작
+            obj2.SetActive(false);          //두번째 스테이지 시작
         }
     }
 
