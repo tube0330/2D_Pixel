@@ -19,10 +19,10 @@ public class NextStageBox : MonoBehaviour
     {
         if (col.gameObject.CompareTag(playerTag))
         {
-            playerTr.position = new Vector3(20f, playerTr.position.y, playerTr.position.z);
-            gameObject.SetActive(false);
+            playerTr.position = new Vector3(-6.7f, 0.3f, playerTr.position.z);
+            gameObject.SetActive(false);    //박스 끄기
 
-            GameManager.G_instance.OffBackground(true); // all off first obj
+            GameManager.G_instance.OffObject(true); // all off first obj
         }
     }
 }

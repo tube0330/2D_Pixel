@@ -8,6 +8,8 @@ TagManager:
   - LADDER
   - ITEM
   - BACKGROUND
+  - OBJECT1
+  - OBJECT2
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - Water
   - UI
   - LADDER
-  - 
-  - 
+  - OBJECT1
+  - OBJECT2
   - 
   - 
   - 

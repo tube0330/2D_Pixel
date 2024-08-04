@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour
     private Text score_txt;
     public int score = 0;
 
-    [Header("off all objects for the next stage")]
+    [Header("Stage OBJ")]
     SpriteRenderer bg;
-    GameObject obj_1;
+    GameObject obj1, obj2;
+
+    [Header("random background image")]
     Sprite[] bgSprite;
 
     void Awake()
@@ -27,7 +29,11 @@ public class GameManager : MonoBehaviour
         score_txt = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
 
         bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>(); GetComponent<SpriteRenderer>();
-        obj_1 = GameObject.Find("_OBJECT_1");
+
+        obj1 = GameObject.Find("_OBJECT_1");
+        obj2 = GameObject.Find("_OBJECT_2");
+        obj1.SetActive(true);
+        obj2.SetActive(false);
 
         bgSprite = Resources.LoadAll<Sprite>("BackgroundImg");
     }
@@ -38,15 +44,20 @@ public class GameManager : MonoBehaviour
     }
 
     //첫번째 obj 끄기
-    public void OffBackground(bool isoff)
+    public void OffObject(bool isoff)
     {
         if (isoff)
         {
-            bg.gameObject.SetActive(false);
+            bg.gameObject.SetActive(false); //배경 이미지 off
+            obj1.SetActive(false);          //첫번째 스테이지 off
 
-            obj_1.gameObject.SetActive(false);
+            RandomBg();                     //배경 이미지 랜덤하게 변경
+            bg.gameObject.SetActive(true);  //배경이미지 on
+            obj2.SetActive(true);           //두번째 스테이지 시작
 
-            RandomBg();
+            RandomBg();                     //배경 이미지 랜덤하게 변경
+            bg.gameObject.SetActive(true);  //배경이미지 on
+            obj2.SetActive(false);           //두번째 스테이지 시작
         }
     }
 

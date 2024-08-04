@@ -33,9 +33,11 @@ public class PlayerMove : MonoBehaviour
         HorizontalMove();
         Jump();
 
-        //플레이어 죽음 처리
-        if (tr.position.y < -6f)
-            MoveSceneManager.S_instance.LoadStartScene();
+        //왼쪽 이동 제한 
+        if (tr.position.x < -9f)
+        {
+            tr.position = new Vector3(-9f, tr.position.y, tr.position.z);
+        }
     }
 
     //수평이동
