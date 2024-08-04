@@ -43,13 +43,14 @@ public class GameManager : MonoBehaviour
         if (isoff)
         {
             bg.gameObject.SetActive(false);
-            
+
             obj_1.gameObject.SetActive(false);
 
             RandomBg();
         }
     }
 
+    //랜덤 배경이미지로 번경
     void RandomBg()
     {
         int idx = Random.Range(0, bgSprite.Length);

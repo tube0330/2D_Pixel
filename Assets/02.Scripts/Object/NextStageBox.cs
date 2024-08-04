@@ -15,15 +15,6 @@ public class NextStageBox : MonoBehaviour
         playerTr = GameObject.FindWithTag(playerTag).GetComponent<Transform>();
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag(playerTag))
-        {
-            playerTr.position = new Vector3(40f, playerTr.position.y, playerTr.position.z);
-            gameObject.SetActive(false);
-        }
-    }
-
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag(playerTag))

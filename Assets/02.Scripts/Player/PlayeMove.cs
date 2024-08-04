@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Net;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -33,6 +32,10 @@ public class PlayerMove : MonoBehaviour
     {
         HorizontalMove();
         Jump();
+
+        //플레이어 죽음 처리
+        if (tr.position.y < -6f)
+            MoveSceneManager.S_instance.LoadStartScene();
     }
 
     //수평이동
