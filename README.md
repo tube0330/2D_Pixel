@@ -8,3 +8,7 @@
 2. Create Gamemanager Singleton
 3. Edit tilemap
 4. Create UI
+
+# 240804
+1. Start Scene UI, Scene Move
+2. 
