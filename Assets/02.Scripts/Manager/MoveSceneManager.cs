@@ -6,7 +6,7 @@ public class MoveManager : MonoBehaviour
 {
     public void LoadNextScene()
     {
-        SceneManager.LoadScene("PlayScene"); // 로드할 씬 이름
+        SceneManager.LoadScene("PlayScene");
     }
 
     public void QuitGame()
@@ -15,6 +15,6 @@ public class MoveManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #else
         Application.Quit();
-        #endif              //전처리기 지시어 끝
+        #endif
     }
 }

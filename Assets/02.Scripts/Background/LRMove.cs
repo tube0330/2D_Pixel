@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StartBG : MonoBehaviour
+public class LRMove : MonoBehaviour
 {
     Transform tr;
     float speed = 1f; // 이동 속도
@@ -11,7 +11,7 @@ public class StartBG : MonoBehaviour
     void Start()
     {
         tr = GetComponent<Transform>();
-        startPosX = tr.position.x;  // 시작 위치 저장 및 배경 이미지 가로 길이 계산
+        startPosX = tr.position.x;
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         w = sprite.size.x;
     }

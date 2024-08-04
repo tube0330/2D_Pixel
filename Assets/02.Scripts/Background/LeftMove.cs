@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BG_Move : MonoBehaviour
+public class LeftMove : MonoBehaviour
 {
     private Transform tr;
     private BoxCollider2D boxcol;
