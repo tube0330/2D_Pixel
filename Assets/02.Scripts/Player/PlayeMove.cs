@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] Animator ani;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Transform tr;
-    float speed = 3f;
+    float moveSpeed = 2f;
     float jumpForce = 3.5f;
     float h = 0f;
     int jumpCnt = 0;
@@ -65,7 +65,7 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate()
     {
         //이동
-        rb.velocity = new Vector2(h * speed, rb.velocity.y);
+        rb.velocity = new Vector2(h * moveSpeed, rb.velocity.y);
 
         // 애니메이션 설정
         if (Mathf.Abs(h) > 0)
@@ -84,7 +84,7 @@ public class PlayerMove : MonoBehaviour
         {
             float v = Input.GetAxis("Vertical");
             rb.gravityScale = 0;
-            rb.velocity = new Vector2(rb.velocity.x, v * speed);
+            rb.velocity = new Vector2(rb.velocity.x, v * moveSpeed);
         }
 
         else
