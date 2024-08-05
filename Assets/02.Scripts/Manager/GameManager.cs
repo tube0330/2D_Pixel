@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
         score_txt = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
 
-        bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>(); GetComponent<SpriteRenderer>();
+        bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>();
 
         obj1 = GameObject.Find("_OBJECT_1");
         obj2 = GameObject.Find("_OBJECT_2");

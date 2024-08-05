@@ -3407,7 +3407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 392646083}
   m_Layer: 8
-  m_Name: _OBJECT_2 (1)
+  m_Name: _OBJECT_3
   m_TagString: OBJECT2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12833,6 +12833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  boxCnt: 0
 --- !u!4 &1384949545
 Transform:
   m_ObjectHideFlags: 0
