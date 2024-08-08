@@ -6,7 +6,7 @@ public class OnOffTile : MonoBehaviour
 {
     string playerTag = "Player";
     SpriteRenderer spriteRenderer;
-    public Sprite offImage;
+    [SerializeField] Sprite offImage;
     Animator ani;
     Rigidbody2D rb;
     BoxCollider2D col;
@@ -31,6 +31,9 @@ public class OnOffTile : MonoBehaviour
         ani.enabled = false;
         spriteRenderer.sprite = offImage;
         col.enabled = false;
-        rb.isKinematic = false; //-> falling tileA
+        rb.isKinematic = false; //-> falling tile
+
+        yield return new WaitForSeconds(3f);
+        gameObject.SetActive(false);
     }
 }
