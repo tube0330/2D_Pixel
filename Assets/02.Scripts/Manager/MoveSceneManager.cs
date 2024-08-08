@@ -27,8 +27,8 @@ public class MoveSceneManager : MonoBehaviour
 #endif
     }
 
-    public void LoadStartScene()
+    /* public void LoadStartScene()
     {
         SceneManager.LoadScene("StartScene");
-    }
+    } */
 }
