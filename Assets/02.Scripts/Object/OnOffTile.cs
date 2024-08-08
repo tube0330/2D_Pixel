@@ -22,13 +22,15 @@ public class OnOffTile : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag(playerTag))
+        {
+            ani.enabled = false;
             StartCoroutine(Tileoff());
+        }
     }
 
     IEnumerator Tileoff()
     {
         yield return new WaitForSeconds(0.5f);
-        ani.enabled = false;
         spriteRenderer.sprite = offImage;
         col.enabled = false;
         rb.isKinematic = false; //-> falling tile
