@@ -6,34 +6,23 @@ using UnityEngine;
 public class Die : MonoBehaviour
 {
     Transform tr;
-
-    [Header("Death")]
-    public int death = 0;
+    string dieZoneTag = "DIEZONE";
+    string startSignTag = "STARTSIGN";
 
     void Start()
     {
         tr = transform;
     }
 
-    void Update()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (tr.position.y < -6f)
+        if (col.gameObject.CompareTag(dieZoneTag))
         {
-            //MoveSceneManager.S_instance.LoadStartScene();
-            StartCoroutine(ShowDieUI());
+            GameManager.G_instance.isDead = true;
+            GameManager.G_instance.death++;            
         }
-    }
 
-    IEnumerator ShowDieUI()
-    {
-        GameManager.G_instance.BlackImg.color = new Color(0, 0, 0, 255);
-        GameManager.G_instance.CharacterImg.enabled = true;
-        GameManager.G_instance.Death_txt.enabled = true;
-        GameManager.G_instance.Death_txt.text = "X " + ++death;
-        tr.position = GameManager.G_instance.startSign.position;
-        yield return new WaitForSeconds(2f);
-        GameManager.G_instance.BlackImg.color = new Color(0, 0, 0, 0);
-        GameManager.G_instance.CharacterImg.enabled = false;
-        GameManager.G_instance.Death_txt.enabled = false;
+        if(col.gameObject.CompareTag(startSignTag))
+            GameManager.G_instance.isDead = false;
     }
 }

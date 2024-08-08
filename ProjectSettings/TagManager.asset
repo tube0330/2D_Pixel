@@ -8,8 +8,8 @@ TagManager:
   - LADDER
   - ITEM
   - BACKGROUND
-  - OBJECT1
-  - OBJECT2
+  - DIEZONE
+  - POINT
   layers:
   - Default
   - TransparentFX
