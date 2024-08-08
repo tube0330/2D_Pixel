@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     public int death = 0;
     public bool isDead = false;
 
-    [Header("ItemOnOff")]
-    public List<GameObject> items = new List<GameObject>();
+    /* [Header("ItemOnOff")]
+    public List<GameObject> items = new List<GameObject>(); */
 
 
     void Awake()
@@ -44,9 +44,9 @@ public class GameManager : MonoBehaviour
         CharacterImg.enabled = false;           //character Image off
         Death_txt.enabled = false;              //death text off
 
-        GameObject[] allItems = GameObject.FindGameObjectsWithTag("ITEM");
+        /* GameObject[] allItems = GameObject.FindGameObjectsWithTag("ITEM");
         foreach (GameObject item in allItems)
-            items.Add(item);
+            items.Add(item); */
     }
 
     void Update()
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         CharacterImg.enabled = false;               //character Image off
         Death_txt.enabled = false;                  //death text off
 
-        foreach (GameObject item in items)
-            item.SetActive(true);
+        /* foreach (GameObject item in items)
+            item.SetActive(true); */
     }
 }
