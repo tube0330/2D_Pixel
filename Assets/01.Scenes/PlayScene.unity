@@ -702,6 +702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kiwi
       objectReference: {fileID: 0}
+    - target: {fileID: 685762343240991881, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
+      propertyPath: m_TagString
+      value: ITEM
+      objectReference: {fileID: 0}
     - target: {fileID: 9023414292165704270, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -770,7 +774,7 @@ GameObject:
   - component: {fileID: 130812828}
   m_Layer: 7
   m_Name: Cherries
-  m_TagString: Untagged
+  m_TagString: ITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,7 +1100,7 @@ GameObject:
   - component: {fileID: 223951958}
   m_Layer: 7
   m_Name: Banana
-  m_TagString: Untagged
+  m_TagString: ITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1550,6 +1554,10 @@ PrefabInstance:
     - target: {fileID: 2597441887573977038, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_Name
       value: Orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597441887573977038, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
+      propertyPath: m_TagString
+      value: ITEM
       objectReference: {fileID: 0}
     - target: {fileID: 3711878332673741194, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6119,6 +6127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banana
       objectReference: {fileID: 0}
+    - target: {fileID: 8595974259632142125, guid: 536a15132cbc67f4da2fb6d844342be0, type: 3}
+      propertyPath: m_TagString
+      value: ITEM
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6327,7 +6339,7 @@ GameObject:
   - component: {fileID: 995051756}
   m_Layer: 7
   m_Name: Cherries
-  m_TagString: Untagged
+  m_TagString: ITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8734,7 +8746,7 @@ GameObject:
   - component: {fileID: 1062679323}
   m_Layer: 7
   m_Name: Banana
-  m_TagString: Untagged
+  m_TagString: ITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8886,6 +8898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 2597441887573977038, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
+      propertyPath: m_TagString
+      value: ITEM
+      objectReference: {fileID: 0}
     - target: {fileID: 3711878332673741194, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -8989,7 +9005,7 @@ GameObject:
   - component: {fileID: 1132378150}
   m_Layer: 7
   m_Name: Kiwi
-  m_TagString: Untagged
+  m_TagString: ITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12248,6 +12264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cherries
       objectReference: {fileID: 0}
+    - target: {fileID: 4330548890549513959, guid: a05b7cc80741307418346539227feeb0, type: 3}
+      propertyPath: m_TagString
+      value: ITEM
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12597,7 +12617,7 @@ GameObject:
   - component: {fileID: 1214687915}
   m_Layer: 7
   m_Name: Melon
-  m_TagString: Untagged
+  m_TagString: ITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13424,7 +13444,8 @@ MonoBehaviour:
   CharacterImg: {fileID: 0}
   Death_txt: {fileID: 0}
   death: 0
-  isDie: 0
+  isDead: 0
+  items: []
 --- !u!4 &1384949545
 Transform:
   m_ObjectHideFlags: 0
@@ -13615,7 +13636,7 @@ GameObject:
   - component: {fileID: 1398241755}
   m_Layer: 7
   m_Name: Melon
-  m_TagString: Untagged
+  m_TagString: ITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13925,6 +13946,10 @@ PrefabInstance:
     - target: {fileID: 8595974259632142125, guid: 536a15132cbc67f4da2fb6d844342be0, type: 3}
       propertyPath: m_Name
       value: Banana
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595974259632142125, guid: 536a15132cbc67f4da2fb6d844342be0, type: 3}
+      propertyPath: m_TagString
+      value: ITEM
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15843,7 +15868,7 @@ GameObject:
   - component: {fileID: 2030227884}
   m_Layer: 7
   m_Name: Banana
-  m_TagString: Untagged
+  m_TagString: ITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

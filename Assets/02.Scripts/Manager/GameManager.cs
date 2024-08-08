@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     public int death = 0;
     public bool isDead = false;
 
+    [Header("ItemOnOff")]
+    public List<GameObject> items = new List<GameObject>();
+
+
     void Awake()
     {
         if (G_instance == null)
@@ -36,9 +40,13 @@ public class GameManager : MonoBehaviour
         CharacterImg = GameObject.Find("Canvas").transform.GetChild(1).GetChild(1).GetComponent<Image>();
         Death_txt = GameObject.Find("Canvas").transform.GetChild(1).GetChild(2).GetComponent<Text>();
 
-        BlackImg.color = new Color(0, 0, 0, 0);
-        CharacterImg.enabled = false;
-        Death_txt.enabled = false;
+        BlackImg.color = new Color(0, 0, 0, 0); //black Image off
+        CharacterImg.enabled = false;           //character Image off
+        Death_txt.enabled = false;              //death text off
+
+        GameObject[] allItems = GameObject.FindGameObjectsWithTag("ITEM");
+        foreach (GameObject item in allItems)
+            items.Add(item);
     }
 
     void Update()
@@ -51,15 +59,18 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ShowDieUI()
     {
-        BlackImg.color = new Color(0, 0, 0, 255);
-        CharacterImg.enabled = true;
-        Death_txt.enabled = true;
-        Death_txt.text = "X " + death;
-        playerTr.position = startSign.position;
+        BlackImg.color = new Color(0, 0, 0, 255);   //black Image on
+        CharacterImg.enabled = true;                //character Image on
+        Death_txt.enabled = true;                   //death text on
+        Death_txt.text = "X " + death;              //show death count
+        playerTr.position = startSign.position;     //player position reset
 
         yield return new WaitForSeconds(2f);
-        BlackImg.color = new Color(0, 0, 0, 0);
-        CharacterImg.enabled = false;
-        Death_txt.enabled = false;
+        BlackImg.color = new Color(0, 0, 0, 0);     //black Image off
+        CharacterImg.enabled = false;               //character Image off
+        Death_txt.enabled = false;                  //death text off
+
+        foreach (GameObject item in items)
+            item.SetActive(true);
     }
 }
