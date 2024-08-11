@@ -43,15 +43,6 @@ public class GameManager : MonoBehaviour
         BlackImg.color = new Color(0, 0, 0, 0); //black Image off
         CharacterImg.enabled = false;           //character Image off
         Death_txt.enabled = false;              //death text off
-
-        GameObject[] obj1_item = GetComponentsInChildren<GameObject>();
-        foreach (GameObject item in obj1_item)
-            items.Add(item);
-    }
-
-    void Start()
-    {
-        
     }
 
     void Update()

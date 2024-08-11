@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChangeStage : MonoBehaviour
@@ -9,7 +8,7 @@ public class ChangeStage : MonoBehaviour
 
     [Header("Stage OBJ")]
     SpriteRenderer bg;
-    GameObject[] stageObj = new GameObject[3];
+    [SerializeField] GameObject[] stageObj = new GameObject[3];
     public int boxCnt = 0;
 
     [Header("random background image")]
@@ -24,7 +23,6 @@ public class ChangeStage : MonoBehaviour
             Destroy(gameObject);
 
         bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>(); GetComponent<SpriteRenderer>();
-
         for (int i = 0; i < stageObj.Length; i++)
             stageObj[i].SetActive(false);
 

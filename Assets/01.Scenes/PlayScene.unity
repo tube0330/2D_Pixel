@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 101994832}
   m_Layer: 7
   m_Name: _OBJECT_1
-  m_TagString: Untagged
+  m_TagString: OBJECT1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1063,7 +1063,7 @@ GameObject:
   - component: {fileID: 195852875}
   m_Layer: 8
   m_Name: _OBJECT_3
-  m_TagString: Untagged
+  m_TagString: OBJECT3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1903,8 +1903,8 @@ Transform:
   m_GameObject: {fileID: 407984081}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.382597, y: -0.36086708, z: 0}
-  m_LocalScale: {x: 0.889875, y: 0.5125, z: 1}
+  m_LocalPosition: {x: 11, y: -0.36086708, z: 0}
+  m_LocalScale: {x: 2.369292, y: 0.5125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 101994832}
@@ -4318,7 +4318,7 @@ GameObject:
   - component: {fileID: 528380848}
   m_Layer: 8
   m_Name: _OBJECT_2
-  m_TagString: Untagged
+  m_TagString: OBJECT2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5148,7 +5148,7 @@ GameObject:
   - component: {fileID: 805112426}
   m_Layer: 7
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: ITEM1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8449,7 +8449,7 @@ GameObject:
   - component: {fileID: 1019727982}
   m_Layer: 0
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: ITEM3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13457,6 +13457,7 @@ MonoBehaviour:
   Death_txt: {fileID: 0}
   death: 0
   isDead: 0
+  item1: []
 --- !u!4 &1384949545
 Transform:
   m_ObjectHideFlags: 0
@@ -14087,7 +14088,7 @@ GameObject:
   - component: {fileID: 1548359224}
   m_Layer: 0
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: ITEM2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
