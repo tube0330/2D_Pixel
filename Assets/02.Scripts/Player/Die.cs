@@ -1,18 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class Die : MonoBehaviour
 {
-    Transform tr;
     string deadZoneTag = "DEADZONE";
     string startSignTag = "STARTSIGN";
-
-    void Start()
-    {
-        tr = transform;
-    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -20,6 +13,7 @@ public class Die : MonoBehaviour
         {
             GameManager.G_instance.isDead = true;
             GameManager.G_instance.death++;
+            OnOffTile.T_Instance.Tileon();
         }
 
         if(col.gameObject.CompareTag(startSignTag))
