@@ -20,21 +20,22 @@ public class GameManager : MonoBehaviour
     public int death = 0;
     public bool isDead = false;
 
-    [Header("ItemOnOff")]
+    /* [Header("ItemOnOff")]
     [SerializeField] GameObject[] obj_item = new GameObject[3];
-    string[] tags = { "ITEM1", "ITEM2", "ITEM3" };
+    string[] tags = { "ITEM1", "ITEM2", "ITEM3" }; */
 
 
     void Awake()
     {
         if (G_instance == null)
             G_instance = this;
-
         else if (G_instance != this)
             Destroy(gameObject);
 
+        #region canvas
         score_txt = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
-
+        #endregion
+        #region Die
         playerTr = GameObject.FindWithTag("Player").GetComponent<Transform>();
         startSign = GameObject.Find("StartSign").GetComponent<Transform>();
         BlackImg = GameObject.Find("Canvas").transform.GetChild(1).GetChild(0).GetComponent<Image>();
@@ -44,9 +45,9 @@ public class GameManager : MonoBehaviour
         BlackImg.color = new Color(0, 0, 0, 0); //black Image off
         CharacterImg.enabled = false;           //character Image off
         Death_txt.enabled = false;              //death text off
-
-        for (int i = 0; i < tags.Length; i++)
-            obj_item[i] = GameObject.FindWithTag(tags[i]);
+        #endregion
+        /* for (int i = 0; i < tags.Length; i++)
+            obj_item[i] = GameObject.FindWithTag(tags[i]); */
     }
 
     void Update()
