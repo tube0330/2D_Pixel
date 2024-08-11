@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Die : MonoBehaviour
 {
+    Transform tr;
     string deadZoneTag = "DEADZONE";
     string startSignTag = "STARTSIGN";
 
@@ -13,7 +14,7 @@ public class Die : MonoBehaviour
         {
             GameManager.G_instance.isDead = true;
             GameManager.G_instance.death++;
-            OnOffTile.T_Instance.Tileon();
+
         }
 
         if(col.gameObject.CompareTag(startSignTag))

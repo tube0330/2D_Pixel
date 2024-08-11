@@ -312,7 +312,6 @@ GameObject:
   - component: {fileID: 67206438}
   - component: {fileID: 67206437}
   - component: {fileID: 67206436}
-  - component: {fileID: 67206440}
   - component: {fileID: 67206439}
   m_Layer: 0
   m_Name: On3
@@ -482,20 +481,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &67206440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67206433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807375a4a336ff040afb0bf7b15922b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offImage: {fileID: 21300000, guid: b497595b72a847541a794a04572099df, type: 3}
-  onImage: {fileID: 1980803016, guid: 5e727967b31c85a46bccdee99f7bca63, type: 3}
 --- !u!1 &73612535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,7 +2075,7 @@ GameObject:
   - component: {fileID: 498115551}
   m_Layer: 7
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: TILEMAP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4479,7 +4464,7 @@ Transform:
   m_GameObject: {fileID: 616642799}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.21, y: -4.71, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4591,7 +4576,6 @@ GameObject:
   - component: {fileID: 630625608}
   - component: {fileID: 630625607}
   - component: {fileID: 630625609}
-  - component: {fileID: 630625612}
   - component: {fileID: 630625611}
   m_Layer: 0
   m_Name: On4
@@ -4761,20 +4745,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &630625612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630625605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807375a4a336ff040afb0bf7b15922b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offImage: {fileID: 21300000, guid: b497595b72a847541a794a04572099df, type: 3}
-  onImage: {fileID: 1980803016, guid: 5e727967b31c85a46bccdee99f7bca63, type: 3}
 --- !u!1 &639592929
 GameObject:
   m_ObjectHideFlags: 0
@@ -5148,7 +5118,7 @@ GameObject:
   - component: {fileID: 756694335}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: TILEMAP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5291,7 +5261,6 @@ GameObject:
   - component: {fileID: 822014382}
   - component: {fileID: 822014381}
   - component: {fileID: 822014380}
-  - component: {fileID: 822014386}
   - component: {fileID: 822014385}
   m_Layer: 0
   m_Name: On2
@@ -5461,20 +5430,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &822014386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822014378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807375a4a336ff040afb0bf7b15922b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offImage: {fileID: 21300000, guid: b497595b72a847541a794a04572099df, type: 3}
-  onImage: {fileID: 1980803016, guid: 5e727967b31c85a46bccdee99f7bca63, type: 3}
 --- !u!1 &824811266
 GameObject:
   m_ObjectHideFlags: 0
@@ -12133,8 +12088,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176648303}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.5, z: -2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13478,7 +13433,7 @@ MonoBehaviour:
   CharacterImg: {fileID: 0}
   Death_txt: {fileID: 0}
   death: 0
-  isDead: 0
+  isDead: 1
 --- !u!4 &1384949545
 Transform:
   m_ObjectHideFlags: 0
@@ -14450,7 +14405,7 @@ Transform:
   m_GameObject: {fileID: 1586968004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.14, y: 0, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14882,7 +14837,7 @@ GameObject:
   - component: {fileID: 1750182367}
   m_Layer: 8
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: TILEMAP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15713,8 +15668,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004204920}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 2.5, z: -2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15927,6 +15882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offImage: {fileID: 21300000, guid: b497595b72a847541a794a04572099df, type: 3}
   onImage: {fileID: 1980803016, guid: 5e727967b31c85a46bccdee99f7bca63, type: 3}
+  tileTr: {fileID: 0}
 --- !u!50 &2014557645
 Rigidbody2D:
   serializedVersion: 4
@@ -16121,7 +16077,7 @@ GameObject:
   - component: {fileID: 2031350334}
   m_Layer: 8
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: TILEMAP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class OnOffTile : MonoBehaviour
 {
-    public static OnOffTile T_Instance;
-
     string playerTag = "Player";
     SpriteRenderer spriteRenderer;
     [SerializeField] Sprite offImage;
@@ -13,9 +11,8 @@ public class OnOffTile : MonoBehaviour
     Animator ani;
     Rigidbody2D rb;
     BoxCollider2D col;
-    
-    Transform tr;
-    Transform tileTr;
+
+    public Transform tileTr;
 
     void Start()
     {
@@ -24,7 +21,6 @@ public class OnOffTile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
 
-        tr = transform;
         tileTr = transform.GetChild(0).GetComponent<Transform>();
     }
 
@@ -34,6 +30,12 @@ public class OnOffTile : MonoBehaviour
             StartCoroutine(Tileoff());
     }
 
+    void Update()
+    {
+        if (GameManager.G_instance.isDead)
+            StartCoroutine(Tileon());
+    }
+
     IEnumerator Tileoff()
     {
         ani.enabled = false;
@@ -41,21 +43,16 @@ public class OnOffTile : MonoBehaviour
         spriteRenderer.sprite = offImage;
         col.enabled = false;
         rb.isKinematic = false; //-> falling tile
-
-        yield return new WaitForSeconds(3f);
-        gameObject.SetActive(false);
     }
 
-    public IEnumerator Tileon()
+    IEnumerator Tileon()
     {
-        tr = tileTr;
-        ani.enabled = true;
-        yield return new WaitForSeconds(0.5f);
         spriteRenderer.sprite = onImage;
         col.enabled = true;
         rb.isKinematic = true;
+        ani.enabled = true;
 
-        yield return new WaitForSeconds(3f);
-        gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        transform.position = tileTr.position;
     }
 }
