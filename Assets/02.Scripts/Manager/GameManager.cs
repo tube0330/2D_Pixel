@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
     public bool isDead = false;
 
     [Header("ItemOnOff")]
-    public List<GameObject> item1 = new List<GameObject>();
+    [SerializeField] GameObject[] obj_item = new GameObject[3];
+    string[] tags = { "ITEM1", "ITEM2", "ITEM3" };
 
 
     void Awake()
@@ -43,6 +44,9 @@ public class GameManager : MonoBehaviour
         BlackImg.color = new Color(0, 0, 0, 0); //black Image off
         CharacterImg.enabled = false;           //character Image off
         Death_txt.enabled = false;              //death text off
+
+        for (int i = 0; i < tags.Length; i++)
+            obj_item[i] = GameObject.FindWithTag(tags[i]);
     }
 
     void Update()

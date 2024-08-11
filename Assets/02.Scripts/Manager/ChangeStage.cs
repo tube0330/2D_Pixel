@@ -22,7 +22,8 @@ public class ChangeStage : MonoBehaviour
         else if (C_instance != this)
             Destroy(gameObject);
 
-        bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>(); GetComponent<SpriteRenderer>();
+        bg = GameObject.Find("Background").transform.GetChild(0).GetComponent<SpriteRenderer>();
+        
         for (int i = 0; i < stageObj.Length; i++)
             stageObj[i].SetActive(false);
 
