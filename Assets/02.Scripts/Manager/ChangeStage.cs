@@ -9,7 +9,7 @@ public class ChangeStage : MonoBehaviour
 
     [Header("Stage OBJ")]
     SpriteRenderer bg;
-    [SerializeField] GameObject[] stageObj = new GameObject[3];
+    GameObject[] stageObj = new GameObject[3];
     public int boxCnt = 0;
 
     [Header("random background image")]

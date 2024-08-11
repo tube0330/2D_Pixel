@@ -704,7 +704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 685762343240991881, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
       propertyPath: m_TagString
-      value: ITEM
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9023414292165704270, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 130812828}
   m_Layer: 7
   m_Name: Cherries
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,6 +925,10 @@ PrefabInstance:
     - target: {fileID: 685762343240991881, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
       propertyPath: m_Name
       value: Kiwi
+      objectReference: {fileID: 0}
+    - target: {fileID: 685762343240991881, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9023414292165704270, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1100,7 +1104,7 @@ GameObject:
   - component: {fileID: 223951958}
   m_Layer: 7
   m_Name: Banana
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1251,6 +1255,10 @@ PrefabInstance:
     - target: {fileID: 2597441887573977038, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_Name
       value: Orange (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597441887573977038, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3711878332673741194, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1557,7 +1565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2597441887573977038, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_TagString
-      value: ITEM
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3711878332673741194, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5648,6 +5656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cherries
       objectReference: {fileID: 0}
+    - target: {fileID: 4330548890549513959, guid: a05b7cc80741307418346539227feeb0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6129,7 +6141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595974259632142125, guid: 536a15132cbc67f4da2fb6d844342be0, type: 3}
       propertyPath: m_TagString
-      value: ITEM
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6339,7 +6351,7 @@ GameObject:
   - component: {fileID: 995051756}
   m_Layer: 7
   m_Name: Cherries
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8746,7 +8758,7 @@ GameObject:
   - component: {fileID: 1062679323}
   m_Layer: 7
   m_Name: Banana
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8900,7 +8912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2597441887573977038, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_TagString
-      value: ITEM
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3711878332673741194, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9005,7 +9017,7 @@ GameObject:
   - component: {fileID: 1132378150}
   m_Layer: 7
   m_Name: Kiwi
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12266,7 +12278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4330548890549513959, guid: a05b7cc80741307418346539227feeb0, type: 3}
       propertyPath: m_TagString
-      value: ITEM
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12617,7 +12629,7 @@ GameObject:
   - component: {fileID: 1214687915}
   m_Layer: 7
   m_Name: Melon
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13201,7 +13213,7 @@ GameObject:
   - component: {fileID: 1352748871}
   m_Layer: 7
   m_Name: Apple
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13445,7 +13457,6 @@ MonoBehaviour:
   Death_txt: {fileID: 0}
   death: 0
   isDead: 0
-  items: []
 --- !u!4 &1384949545
 Transform:
   m_ObjectHideFlags: 0
@@ -13636,7 +13647,7 @@ GameObject:
   - component: {fileID: 1398241755}
   m_Layer: 7
   m_Name: Melon
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13949,7 +13960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595974259632142125, guid: 536a15132cbc67f4da2fb6d844342be0, type: 3}
       propertyPath: m_TagString
-      value: ITEM
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14624,6 +14635,10 @@ PrefabInstance:
     - target: {fileID: 885180235102851592, guid: f2c4ce010e1574f438073cd4ff99264a, type: 3}
       propertyPath: m_Name
       value: Melon
+      objectReference: {fileID: 0}
+    - target: {fileID: 885180235102851592, guid: f2c4ce010e1574f438073cd4ff99264a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4023582814765129296, guid: f2c4ce010e1574f438073cd4ff99264a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15868,7 +15883,7 @@ GameObject:
   - component: {fileID: 2030227884}
   m_Layer: 7
   m_Name: Banana
-  m_TagString: ITEM
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16354,6 +16369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 2597441887573977038, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3711878332673741194, guid: 1907824c9aa17b84796304189a5828f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -16600,6 +16619,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 885180235102851592, guid: f2c4ce010e1574f438073cd4ff99264a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4023582814765129296, guid: f2c4ce010e1574f438073cd4ff99264a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.640001
@@ -16762,6 +16785,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4330548890549513959, guid: a05b7cc80741307418346539227feeb0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16876,10 +16903,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banana
       objectReference: {fileID: 0}
-    - target: {fileID: 8595974259632142125, guid: 536a15132cbc67f4da2fb6d844342be0, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16936,14 +16959,6 @@ PrefabInstance:
     - target: {fileID: 5442365115562685616, guid: d3540af6d091cca4abbd3f22e9c101b2, type: 3}
       propertyPath: m_Name
       value: Apple
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442365115562685616, guid: d3540af6d091cca4abbd3f22e9c101b2, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948840734760424376, guid: d3540af6d091cca4abbd3f22e9c101b2, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17148,6 +17163,10 @@ PrefabInstance:
     - target: {fileID: 685762343240991881, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 685762343240991881, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9023414292165704270, guid: 8ebf77e4d09ad0840ade5a03fdeafcc6, type: 3}
       propertyPath: m_LocalPosition.x
