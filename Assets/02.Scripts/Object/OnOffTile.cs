@@ -43,13 +43,16 @@ public class OnOffTile : MonoBehaviour
         spriteRenderer.sprite = offImage;
         col.enabled = false;
         rb.isKinematic = false; //-> falling tile
+        yield return new WaitForSeconds(3f);
+        gameObject.SetActive(false);
     }
 
     IEnumerator Tileon()
     {
+        gameObject.SetActive(true);
+        rb.isKinematic = true;
         spriteRenderer.sprite = onImage;
         col.enabled = true;
-        rb.isKinematic = true;
         ani.enabled = true;
 
         yield return new WaitForSeconds(1f);
