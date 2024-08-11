@@ -10,7 +10,7 @@ public class OnOffTile : MonoBehaviour
     [SerializeField] Sprite onImage;
     Animator ani;
     Rigidbody2D rb;
-    BoxCollider2D col;
+    Collider2D col;
 
     public Transform tileTr;
 
@@ -19,9 +19,7 @@ public class OnOffTile : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<BoxCollider2D>();
-
-        tileTr = transform.GetChild(0).GetComponent<Transform>();
+        col = GetComponent<Collider2D>();
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -43,19 +41,21 @@ public class OnOffTile : MonoBehaviour
         spriteRenderer.sprite = offImage;
         col.enabled = false;
         rb.isKinematic = false; //-> falling tile
-        yield return new WaitForSeconds(3f);
-        gameObject.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        rb.gravityScale = 0f;
+        spriteRenderer.enabled = false;
     }
 
     IEnumerator Tileon()
     {
-        gameObject.SetActive(true);
+        col.enabled = true;
         rb.isKinematic = true;
         spriteRenderer.sprite = onImage;
-        col.enabled = true;
         ani.enabled = true;
 
         yield return new WaitForSeconds(1f);
+        
+        Debug.Log(tileTr.transform.position);
         transform.position = tileTr.position;
     }
 }
