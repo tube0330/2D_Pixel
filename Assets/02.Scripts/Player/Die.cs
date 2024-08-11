@@ -6,7 +6,7 @@ using UnityEngine;
 public class Die : MonoBehaviour
 {
     Transform tr;
-    string dieZoneTag = "DIEZONE";
+    string deadZoneTag = "DEADZONE";
     string startSignTag = "STARTSIGN";
 
     void Start()
@@ -16,10 +16,10 @@ public class Die : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag(dieZoneTag))
+        if (col.gameObject.CompareTag(deadZoneTag))
         {
             GameManager.G_instance.isDead = true;
-            GameManager.G_instance.death++;            
+            GameManager.G_instance.death++;
         }
 
         if(col.gameObject.CompareTag(startSignTag))

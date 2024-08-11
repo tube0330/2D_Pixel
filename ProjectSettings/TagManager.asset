@@ -10,6 +10,14 @@ TagManager:
   - BACKGROUND
   - DIEZONE
   - POINT
+  - STARTSIGN
+  - OBJECT1
+  - OBJECT2
+  - OBJECT3
+  - ITEM1
+  - ITEM2
+  - ITEM3
+  - DEADZONE
   layers:
   - Default
   - TransparentFX
