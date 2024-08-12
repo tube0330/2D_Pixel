@@ -28,11 +28,11 @@ public class OnOffTile : MonoBehaviour
             StartCoroutine(Tileoff());
     }
 
-    void Update()
+    /* void Update()
     {
         if (GameManager.G_instance.isDead)
             StartCoroutine(Tileon());
-    }
+    } */
 
     IEnumerator Tileoff()
     {
@@ -42,19 +42,27 @@ public class OnOffTile : MonoBehaviour
         col.enabled = false;
         rb.isKinematic = false; //-> falling tile
         yield return new WaitForSeconds(2f);
-        rb.gravityScale = 0f;
-        spriteRenderer.enabled = false;
+        //rb.gravityScale = 0f;
+        //spriteRenderer.enabled = false;
+        gameObject.SetActive(false);
+    }
+
+    void OnEnable()
+    {
+        StartCoroutine(Tileon());
     }
 
     IEnumerator Tileon()
     {
         col.enabled = true;
         rb.isKinematic = true;
+        rb.velocity = new Vector2(rb.velocity.x, 0f);
+        //rb.gravityScale = 0f;
         spriteRenderer.sprite = onImage;
         ani.enabled = true;
 
         yield return new WaitForSeconds(1f);
-        
+
         Debug.Log(tileTr.transform.position);
         transform.position = tileTr.position;
     }
