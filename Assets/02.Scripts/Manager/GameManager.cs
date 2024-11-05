@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager G_instance;
+    public static GameManager instance;
 
     [Header("Canvas")]
     Text score_txt;
@@ -27,9 +27,9 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (G_instance == null)
-            G_instance = this;
-        else if (G_instance != this)
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
             Destroy(gameObject);
 
         #region canvas

@@ -11,7 +11,7 @@ public class ItemTrigger : MonoBehaviour
     {
         if (col.CompareTag(playerTag))
         {
-            GameManager.G_instance.score++;
+            GameManager.instance.score++;
             gameObject.SetActive(false);
         }
     }

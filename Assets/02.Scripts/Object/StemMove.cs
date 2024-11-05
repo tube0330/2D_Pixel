@@ -11,7 +11,7 @@ public class StemMove : MonoBehaviour
     {
         if (col.CompareTag(playerTag))
         {
-            PlayerMove playerMove = col.GetComponent<PlayerMove>();
+            Player playerMove = col.GetComponent<Player>();
             
             if (playerMove != null)
                 playerMove.isLadder = true;
@@ -22,7 +22,7 @@ public class StemMove : MonoBehaviour
     {
         if (col.CompareTag(playerTag))
         {
-            PlayerMove playerMove = col.GetComponent<PlayerMove>();
+            Player playerMove = col.GetComponent<Player>();
 
             if (playerMove != null)
                 playerMove.isLadder = false;

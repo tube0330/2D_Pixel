@@ -12,12 +12,12 @@ public class Die : MonoBehaviour
     {
         if (col.gameObject.CompareTag(deadZoneTag))
         {
-            GameManager.G_instance.isDead = true;
-            GameManager.G_instance.death++;
+            GameManager.instance.isDead = true;
+            GameManager.instance.death++;
 
         }
 
         if(col.gameObject.CompareTag(startSignTag))
-            GameManager.G_instance.isDead = false;
+            GameManager.instance.isDead = false;
     }
 }
