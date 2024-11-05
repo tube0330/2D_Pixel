@@ -28,9 +28,9 @@ public partial class Player : MonoBehaviour
     {
         // 이동
         bool canMove = true;
-        if (LeftHit.collider != null && LeftHit.distance < 0.6f && h == -1)
+        if (LeftHit.collider != null && LeftHit.distance < 0.55f && h == -1)
             canMove = false;
-        else if (RightHit.collider != null && RightHit.distance < 0.6f && h == 1)
+        else if (RightHit.collider != null && RightHit.distance < 0.55f && h == 1)
             canMove = false;
         else canMove = true;
         
