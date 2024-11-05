@@ -37,14 +37,18 @@ public class GameManager : MonoBehaviour
         #endregion
         #region Die
         playerTr = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        startSign = GameObject.Find("StartSign").GetComponent<Transform>();
-        BlackImg = GameObject.Find("Canvas").transform.GetChild(1).GetChild(0).GetComponent<Image>();
-        CharacterImg = GameObject.Find("Canvas").transform.GetChild(1).GetChild(1).GetComponent<Image>();
-        Death_txt = GameObject.Find("Canvas").transform.GetChild(1).GetChild(2).GetComponent<Text>();
+        if (startSign != null)
+            startSign = GameObject.Find("StartSign").GetComponent<Transform>();
+        if (BlackImg != null && CharacterImg != null && Death_txt != null)
+        {
+            BlackImg = GameObject.Find("Canvas").transform.GetChild(1).GetChild(0).GetComponent<Image>();
+            CharacterImg = GameObject.Find("Canvas").transform.GetChild(1).GetChild(1).GetComponent<Image>();
+            Death_txt = GameObject.Find("Canvas").transform.GetChild(1).GetChild(2).GetComponent<Text>();
 
-        BlackImg.color = new Color(0, 0, 0, 0); //black Image off
-        CharacterImg.enabled = false;           //character Image off
-        Death_txt.enabled = false;              //death text off
+            BlackImg.color = new Color(0, 0, 0, 0); //black Image off
+            CharacterImg.enabled = false;           //character Image off
+            Death_txt.enabled = false;              //death text off
+        }
         #endregion
         /* for (int i = 0; i < tags.Length; i++)
             obj_item[i] = GameObject.FindWithTag(tags[i]); */
