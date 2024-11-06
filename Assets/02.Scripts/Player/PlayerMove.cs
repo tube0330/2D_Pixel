@@ -43,15 +43,16 @@ public partial class Player : MonoBehaviour
     // 수평 이동
     void HorizontalMove()
     {
-        h = Input.GetKey(KeyCode.LeftArrow) ? -1f : Input.GetKey(KeyCode.RightArrow) ? 1f : 0f;
+        h = Input.GetAxis("Horizontal");
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (h < 0)
             Left_h = 1f;
-        else    // 왼쪽 이동 제한
+        else
             Left_h = 0f;
-        if (Input.GetKey(KeyCode.RightArrow))
+
+        if (h > 0)
             Right_h = 1f;
-        else   // 오른쪽 이동 제한
+        else
             Right_h = 0f;
 
         sprite.flipX = h < 0;
@@ -81,6 +82,4 @@ public partial class Player : MonoBehaviour
         else
             rb.gravityScale = 2f;
     }
-
-
 }
